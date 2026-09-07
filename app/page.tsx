@@ -31,8 +31,7 @@ tags: ["React", "Node.js", "MySQL", "Security"],
 },
 ];
 
-return ( <main>
-{/* Navigation */} <nav className="navbar"> <div className="nav-container"> <a href="#home" className="logo">
+return ( <main> <nav className="navbar"> <div className="nav-container"> <a href="#home" className="logo">
 Amna<span>.</span> </a>
 
 ```
@@ -64,7 +63,6 @@ Amna<span>.</span> </a>
     </div>
   </nav>
 
-  {/* Hero */}
   <section id="home" className="hero">
     <div className="hero-content">
       <p className="eyebrow">ASPIRING QUALITY ASSURANCE ENGINEER</p>
@@ -102,7 +100,6 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* About */}
   <section id="about" className="section">
     <div className="section-container">
       <p className="section-label">01 — ABOUT ME</p>
@@ -135,7 +132,6 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* Skills */}
   <section id="skills" className="section section-dark">
     <div className="section-container">
       <p className="section-label">02 — QA SKILLS</p>
@@ -153,7 +149,6 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* Projects */}
   <section id="projects" className="section">
     <div className="section-container">
       <p className="section-label">03 — PROJECTS</p>
@@ -180,7 +175,6 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* QA Journey */}
   <section className="section section-dark">
     <div className="section-container">
       <p className="section-label">04 — QA JOURNEY</p>
@@ -201,8 +195,7 @@ Amna<span>.</span> </a>
           <strong>02</strong>
           <h3>API Testing</h3>
           <p>
-            Practising API validation and testing workflows using
-            Postman.
+            Practising API validation and testing workflows using Postman.
           </p>
         </div>
 
@@ -226,7 +219,6 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* Contact */}
   <section id="contact" className="section contact-section">
     <div className="section-container contact-content">
       <p className="section-label">05 — CONTACT</p>
@@ -239,9 +231,7 @@ Amna<span>.</span> </a>
       </p>
 
       <div className="contact-links">
-        <a href="mailto:fathimaamnaamanullah@gmail.com">
-          Email Me
-        </a>
+        <a href="mailto:fathimaamnaamanullah@gmail.com">Email Me</a>
 
         <a
           href="https://www.linkedin.com/in/fathima-amna"
@@ -262,12 +252,8 @@ Amna<span>.</span> </a>
     </div>
   </section>
 
-  {/* Footer */}
   <footer>
-    <div>
-      © {new Date().getFullYear()} Amanulla Fathima Amna
-    </div>
-
+    <div>© {new Date().getFullYear()} Amanulla Fathima Amna</div>
     <div>Aspiring QA Engineer</div>
   </footer>
 
@@ -285,10 +271,7 @@ Amna<span>.</span> </a>
     body {
       background: #080b12;
       color: #f4f7fb;
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
