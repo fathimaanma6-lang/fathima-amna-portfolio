@@ -289,14 +289,14 @@ export default function Home() {
                 Email Me
               </a>
 
-              <a
-                href="https://www.linkedin.com/in/fathima-amna"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn secondary"
-              >
-                LinkedIn
-              </a>
+             <a
+               href="https://www.linkedin.com/in/fathima-amna-qa"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="btn secondary"
+               >
+               LinkedIn
+             </a>
 
               <a
                 href="https://github.com/fathimaanma6-lang"
