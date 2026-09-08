@@ -1,4 +1,3 @@
-```tsx
 "use client";
 
 import { useState } from "react";
@@ -21,14 +20,14 @@ export default function Home() {
     {
       title: "Bus On My Way",
       description:
-        "A Smart Bus Management and Online Booking System developed as a university group project using Laravel, PHP, MySQL and Bootstrap.",
+        "A Smart Bus Management and Online Booking System developed with Laravel, PHP and MySQL.",
       tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
     },
     {
       title: "Secure Student ID Card System",
       description:
-        "A proposed secure digital student identification system designed to improve student identity management using modern web technologies and security practices.",
-      tags: ["React", "Node.js", "MySQL", "AWS Security"],
+        "A proposed secure digital student identification system using modern web technologies and security practices.",
+      tags: ["React", "Node.js", "MySQL", "Security"],
     },
   ];
 
@@ -48,7 +47,9 @@ export default function Home() {
             ☰
           </button>
 
-          <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <div
+            className={menuOpen ? "nav-links open" : "nav-links"}
+          >
             <a href="#home" onClick={() => setMenuOpen(false)}>
               Home
             </a>
@@ -61,9 +62,6 @@ export default function Home() {
             <a href="#projects" onClick={() => setMenuOpen(false)}>
               Projects
             </a>
-            <a href="#journey" onClick={() => setMenuOpen(false)}>
-              QA Journey
-            </a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>
               Contact
             </a>
@@ -75,36 +73,33 @@ export default function Home() {
         {/* HERO */}
         <section id="home" className="hero">
           <div className="hero-content">
-            <p className="eyebrow">ASPIRING QUALITY ASSURANCE ENGINEER</p>
+            <p className="eyebrow">
+              ASPIRING QUALITY ASSURANCE ENGINEER
+            </p>
 
             <h1>
-              Fathima
-              <br />
-              <span>Amna</span>
+              Hi, I&apos;m <span>Fathima Amna</span>
             </h1>
 
-            <p className="hero-description">
+            <h2>Building Quality Into Every Application.</h2>
+
+            <p className="hero-text">
               BA ICT undergraduate at South Eastern University of Sri Lanka,
               passionate about Software Quality Assurance, Software Testing,
               automation, and building reliable web applications.
             </p>
 
             <div className="hero-buttons">
-              <a href="#projects" className="button primary">
+              <a href="#projects" className="btn primary">
                 View My Projects
               </a>
 
-              <a
-                href="https://github.com/fathimaanma6-lang"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button secondary"
-              >
-                GitHub
+              <a href="#contact" className="btn secondary">
+                Contact Me
               </a>
             </div>
 
-            <div className="hero-status">
+            <div className="availability">
               <span className="status-dot"></span>
               Open to QA internship opportunities
             </div>
@@ -114,36 +109,42 @@ export default function Home() {
         {/* ABOUT */}
         <section id="about" className="section">
           <div className="section-container">
-            <p className="section-label">01 — ABOUT ME</p>
+            <p className="section-label">ABOUT ME</p>
 
-            <h2>Building my career in Software Quality Assurance.</h2>
+            <h2 className="section-title">
+              Passionate About Software Quality
+            </h2>
 
             <div className="about-grid">
               <div>
-                <p className="large-text">
-                  I am a third-year BA Information and Communication Technology
-                  undergraduate at South Eastern University of Sri Lanka,
-                  Faculty of Arts and Culture.
+                <p>
+                  I&apos;m a third-year BA Information and Communication
+                  Technology undergraduate at the South Eastern University of
+                  Sri Lanka, Faculty of Arts and Culture.
+                </p>
+
+                <p>
+                  My career goal is to become a Quality Assurance Engineer. I
+                  am developing practical skills in manual testing, test case
+                  design, defect reporting, API testing, SQL testing and test
+                  automation.
+                </p>
+
+                <p>
+                  I enjoy understanding how applications work, identifying
+                  defects, improving reliability and ensuring a better
+                  experience for users.
                 </p>
               </div>
 
-              <div>
-                <p>
-                  I am passionate about Quality Assurance and Software Testing,
-                  with a strong interest in ensuring that software is reliable,
-                  secure, functional and user-friendly.
-                </p>
+              <div className="about-card">
+                <div className="card-icon">QA</div>
+
+                <h3>Quality First</h3>
 
                 <p>
-                  My current learning journey focuses on manual testing, test
-                  case design, defect reporting, API testing, SQL testing and
-                  test automation.
-                </p>
-
-                <p>
-                  I am continuously improving my technical and problem-solving
-                  skills through academic projects, practical testing exercises
-                  and independent learning.
+                  My goal is to help create reliable, secure and user-friendly
+                  software through effective testing and continuous learning.
                 </p>
               </div>
             </div>
@@ -153,17 +154,45 @@ export default function Home() {
         {/* SKILLS */}
         <section id="skills" className="section section-dark">
           <div className="section-container">
-            <p className="section-label">02 — QA SKILLS</p>
+            <p className="section-label">QA SKILLS</p>
 
-            <h2>Testing Skills & Tools</h2>
+            <h2 className="section-title">
+              Testing &amp; Technology
+            </h2>
 
             <div className="skills-grid">
               {skills.map((skill) => (
                 <div className="skill-card" key={skill}>
-                  <span>✓</span>
-                  {skill}
+                  <span className="skill-check">✓</span>
+                  <span>{skill}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="journey">
+              <h3>My QA Learning Journey</h3>
+
+              <div className="journey-grid">
+                <div className="journey-item">
+                  <strong>01</strong>
+                  <span>Manual Testing</span>
+                </div>
+
+                <div className="journey-item">
+                  <strong>02</strong>
+                  <span>API Testing</span>
+                </div>
+
+                <div className="journey-item">
+                  <strong>03</strong>
+                  <span>SQL Testing</span>
+                </div>
+
+                <div className="journey-item">
+                  <strong>04</strong>
+                  <span>Test Automation</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -171,9 +200,11 @@ export default function Home() {
         {/* PROJECTS */}
         <section id="projects" className="section">
           <div className="section-container">
-            <p className="section-label">03 — PROJECTS</p>
+            <p className="section-label">PROJECTS</p>
 
-            <h2>Academic & Technical Projects</h2>
+            <h2 className="section-title">
+              Projects &amp; Experience
+            </h2>
 
             <div className="projects-grid">
               {projects.map((project) => (
@@ -195,47 +226,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* QA JOURNEY */}
-        <section id="journey" className="section section-dark">
+        {/* CURRENT FOCUS */}
+        <section className="section section-dark">
           <div className="section-container">
-            <p className="section-label">04 — QA JOURNEY</p>
+            <p className="section-label">CURRENT FOCUS</p>
 
-            <h2>Learning. Testing. Improving.</h2>
+            <h2 className="section-title">
+              Continuously Learning
+            </h2>
 
-            <div className="journey-grid">
-              <div>
-                <strong>01</strong>
-                <h3>Manual Testing</h3>
+            <div className="focus-grid">
+              <div className="focus-card">
+                <div className="focus-number">01</div>
+                <h3>ISTQB</h3>
                 <p>
-                  Learning SDLC, STLC, test scenarios, test cases, test
-                  execution and defect reporting.
+                  Studying the ISTQB Certified Tester Foundation Level
+                  syllabus.
                 </p>
               </div>
 
-              <div>
-                <strong>02</strong>
+              <div className="focus-card">
+                <div className="focus-number">02</div>
                 <h3>API Testing</h3>
                 <p>
-                  Developing practical API testing skills and learning to
-                  validate requests and responses using Postman.
+                  Developing practical API testing skills using Postman.
                 </p>
               </div>
 
-              <div>
-                <strong>03</strong>
-                <h3>SQL Testing</h3>
+              <div className="focus-card">
+                <div className="focus-number">03</div>
+                <h3>Automation</h3>
                 <p>
-                  Building database testing knowledge using SQL and MySQL to
-                  validate data and application behaviour.
-                </p>
-              </div>
-
-              <div>
-                <strong>04</strong>
-                <h3>Test Automation</h3>
-                <p>
-                  Developing knowledge of browser automation and modern testing
-                  frameworks including Selenium and Playwright.
+                  Exploring Selenium, Playwright and modern automation
+                  practices.
                 </p>
               </div>
             </div>
@@ -244,20 +267,25 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id="contact" className="section contact-section">
-          <div className="section-container contact-content">
-            <p className="section-label">05 — CONTACT</p>
+          <div className="section-container contact-container">
+            <p className="section-label">CONTACT</p>
 
-            <h2>Let's connect.</h2>
+            <h2 className="section-title">
+              Let&apos;s Connect
+            </h2>
 
-            <p>
-              I am interested in QA internships, junior opportunities and
-              opportunities where I can apply my testing knowledge, learn from
-              experienced professionals and contribute to building quality
-              software.
+            <p className="contact-text">
+              I&apos;m open to QA internships, junior opportunities and
+              collaborations. If you are looking for a motivated ICT
+              undergraduate passionate about software quality, let&apos;s
+              connect.
             </p>
 
-            <div className="contact-links">
-              <a href="mailto:fathimaamnaamanullah@gmail.com">
+            <div className="contact-buttons">
+              <a
+                href="mailto:fathimaamnaamanullah@gmail.com"
+                className="btn primary"
+              >
                 Email Me
               </a>
 
@@ -265,6 +293,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/fathima-amna"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn secondary"
               >
                 LinkedIn
               </a>
@@ -273,6 +302,7 @@ export default function Home() {
                 href="https://github.com/fathimaanma6-lang"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn secondary"
               >
                 GitHub
               </a>
@@ -282,8 +312,9 @@ export default function Home() {
       </main>
 
       <footer>
-        <div>© {new Date().getFullYear()} Fathima Amna</div>
-        <div>BA ICT Undergraduate • Aspiring QA Engineer</div>
+        <p>
+          © {new Date().getFullYear()} Fathima Amna. Built with Next.js.
+        </p>
       </footer>
 
       <style>{`
@@ -301,6 +332,7 @@ export default function Home() {
           background: #080b12;
           color: #f4f7fb;
           font-family: Arial, Helvetica, sans-serif;
+          line-height: 1.6;
         }
 
         a {
@@ -309,27 +341,25 @@ export default function Home() {
         }
 
         .navbar {
-          position: fixed;
+          position: sticky;
           top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 100;
-          background: rgba(8, 11, 18, 0.95);
-          border-bottom: 1px solid #1c2432;
+          z-index: 1000;
+          background: rgba(8, 11, 18, 0.94);
+          border-bottom: 1px solid #202633;
           backdrop-filter: blur(12px);
         }
 
         .nav-container {
-          max-width: 1180px;
-          margin: auto;
-          padding: 20px 28px;
+          max-width: 1150px;
+          margin: 0 auto;
+          padding: 18px 24px;
           display: flex;
           align-items: center;
           justify-content: space-between;
         }
 
         .logo {
-          font-size: 25px;
+          font-size: 26px;
           font-weight: 800;
           letter-spacing: -1px;
         }
@@ -340,153 +370,213 @@ export default function Home() {
 
         .nav-links {
           display: flex;
+          align-items: center;
           gap: 28px;
-          color: #aab4c5;
+        }
+
+        .nav-links a {
+          color: #aeb8c7;
           font-size: 14px;
+          font-weight: 600;
+          transition: 0.2s ease;
         }
 
         .nav-links a:hover {
-          color: #ffffff;
+          color: #55b7ff;
         }
 
         .menu-button {
           display: none;
-          background: transparent;
           border: 0;
-          color: white;
-          font-size: 25px;
+          background: transparent;
+          color: #ffffff;
+          font-size: 28px;
           cursor: pointer;
         }
 
         .hero {
-          min-height: 100vh;
+          min-height: 88vh;
           display: flex;
           align-items: center;
-          padding: 140px 28px 90px;
-          background:
-            radial-gradient(
-              circle at 80% 20%,
-              rgba(46, 139, 230, 0.18),
-              transparent 35%
-            ),
-            #080b12;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          width: 420px;
+          height: 420px;
+          border-radius: 50%;
+          background: rgba(45, 151, 255, 0.08);
+          filter: blur(80px);
+          top: 80px;
+          right: 5%;
         }
 
         .hero-content {
-          max-width: 1180px;
+          max-width: 1150px;
           width: 100%;
-          margin: auto;
+          margin: 0 auto;
+          padding: 100px 24px;
+          position: relative;
+          z-index: 1;
         }
 
         .eyebrow,
         .section-label {
           color: #55b7ff;
           font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 2px;
-          margin-bottom: 22px;
+          font-weight: 800;
+          letter-spacing: 3px;
+          margin-bottom: 18px;
         }
 
-        h1 {
-          font-size: clamp(60px, 10vw, 120px);
-          line-height: 0.94;
-          letter-spacing: -5px;
-          margin-bottom: 32px;
+        .hero h1 {
+          font-size: clamp(44px, 7vw, 82px);
+          line-height: 1.05;
+          letter-spacing: -3px;
+          max-width: 900px;
         }
 
-        h1 span {
+        .hero h1 span {
           color: #55b7ff;
         }
 
-        .hero-description {
-          max-width: 720px;
-          color: #aab4c5;
-          font-size: 19px;
-          line-height: 1.7;
+        .hero h2 {
+          margin-top: 22px;
+          font-size: clamp(24px, 4vw, 40px);
+          color: #d8e0eb;
+          font-weight: 600;
         }
 
-        .hero-buttons {
+        .hero-text {
+          max-width: 700px;
+          margin-top: 24px;
+          color: #9da8b8;
+          font-size: 17px;
+        }
+
+        .hero-buttons,
+        .contact-buttons {
           display: flex;
           gap: 14px;
-          margin-top: 38px;
+          flex-wrap: wrap;
+          margin-top: 34px;
         }
 
-        .button {
-          padding: 14px 22px;
-          border-radius: 7px;
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 13px 22px;
+          border-radius: 8px;
           font-weight: 700;
           font-size: 14px;
           transition: 0.2s ease;
         }
 
-        .button:hover {
+        .btn.primary {
+          background: #55b7ff;
+          color: #07101a;
+        }
+
+        .btn.primary:hover {
           transform: translateY(-2px);
         }
 
-        .primary {
-          background: #55b7ff;
-          color: #06101b;
+        .btn.secondary {
+          border: 1px solid #354052;
+          color: #dce5f0;
         }
 
-        .secondary {
-          border: 1px solid #344154;
-          color: white;
+        .btn.secondary:hover {
+          border-color: #55b7ff;
+          color: #55b7ff;
         }
 
-        .hero-status {
-          margin-top: 55px;
-          color: #778399;
-          font-size: 13px;
+        .availability {
+          margin-top: 30px;
+          color: #9da8b8;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 9px;
         }
 
         .status-dot {
-          width: 8px;
-          height: 8px;
-          background: #55b7ff;
+          width: 9px;
+          height: 9px;
           border-radius: 50%;
+          background: #52d273;
           display: inline-block;
-          margin-right: 9px;
+          box-shadow: 0 0 12px rgba(82, 210, 115, 0.6);
         }
 
         .section {
-          padding: 110px 28px;
-          border-top: 1px solid #1c2432;
-          background: #0b0f17;
-        }
-
-        .section-dark {
+          padding: 100px 24px;
           background: #080b12;
         }
 
-        .section-container {
-          max-width: 1180px;
-          margin: auto;
+        .section-dark {
+          background: #0d111a;
+          border-top: 1px solid #161d29;
+          border-bottom: 1px solid #161d29;
         }
 
-        h2 {
-          max-width: 850px;
-          font-size: clamp(38px, 6vw, 70px);
-          line-height: 1;
-          letter-spacing: -3px;
-          margin-bottom: 60px;
+        .section-container {
+          max-width: 1150px;
+          margin: 0 auto;
+        }
+
+        .section-title {
+          font-size: clamp(32px, 5vw, 52px);
+          line-height: 1.1;
+          letter-spacing: -1.5px;
+          margin-bottom: 45px;
         }
 
         .about-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 80px;
+          grid-template-columns: 1.6fr 1fr;
+          gap: 60px;
+          align-items: start;
         }
 
         .about-grid p {
-          color: #aab4c5;
-          line-height: 1.8;
+          color: #aeb8c7;
+          font-size: 16px;
           margin-bottom: 20px;
         }
 
-        .large-text {
-          font-size: 27px;
-          color: white;
-          line-height: 1.4;
+        .about-card {
+          border: 1px solid #293242;
+          background: #10151f;
+          border-radius: 14px;
+          padding: 30px;
+        }
+
+        .card-icon {
+          width: 55px;
+          height: 55px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(85, 183, 255, 0.1);
+          border: 1px solid #55b7ff;
+          color: #55b7ff;
+          border-radius: 10px;
+          font-weight: 800;
+          margin-bottom: 22px;
+        }
+
+        .about-card h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .about-card p {
+          margin: 0;
         }
 
         .skills-grid {
@@ -496,52 +586,91 @@ export default function Home() {
         }
 
         .skill-card {
-          border: 1px solid #222d3d;
-          padding: 25px;
-          color: #c9d2df;
-          background: #0d121c;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid #293242;
+          background: #10151f;
+          padding: 18px;
+          border-radius: 10px;
+          color: #d9e2ed;
+          font-size: 14px;
+          font-weight: 600;
         }
 
-        .skill-card span {
+        .skill-check {
           color: #55b7ff;
-          margin-right: 10px;
+          font-weight: 900;
+        }
+
+        .journey {
+          margin-top: 65px;
+        }
+
+        .journey h3 {
+          font-size: 24px;
+          margin-bottom: 25px;
+        }
+
+        .journey-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+        }
+
+        .journey-item {
+          padding: 25px;
+          border-left: 2px solid #55b7ff;
+          background: #10151f;
+        }
+
+        .journey-item strong {
+          display: block;
+          color: #55b7ff;
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+
+        .journey-item span {
+          color: #dbe4ef;
+          font-weight: 700;
         }
 
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+          gap: 22px;
         }
 
         .project-card {
-          border: 1px solid #253043;
-          padding: 35px;
-          background: #0d121c;
-          min-height: 300px;
-          transition: 0.2s ease;
+          border: 1px solid #293242;
+          background: #10151f;
+          border-radius: 14px;
+          padding: 32px;
+          transition: 0.25s ease;
         }
 
         .project-card:hover {
-          transform: translateY(-4px);
+          transform: translateY(-5px);
           border-color: #55b7ff;
         }
 
         .project-number {
           color: #55b7ff;
           font-size: 11px;
+          font-weight: 800;
           letter-spacing: 2px;
-          margin-bottom: 45px;
+          margin-bottom: 15px;
         }
 
         .project-card h3 {
-          font-size: 30px;
-          margin-bottom: 18px;
+          font-size: 28px;
+          margin-bottom: 14px;
         }
 
         .project-card p {
-          color: #9da8b9;
-          line-height: 1.7;
-          margin-bottom: 28px;
+          color: #aeb8c7;
+          margin-bottom: 24px;
         }
 
         .tags {
@@ -551,32 +680,41 @@ export default function Home() {
         }
 
         .tags span {
-          border: 1px solid #303c4f;
-          color: #9da8b9;
           padding: 7px 10px;
-          border-radius: 4px;
+          background: #19202c;
+          border: 1px solid #303b4d;
+          border-radius: 6px;
+          color: #bcd1e5;
           font-size: 12px;
         }
 
-        .journey-grid {
+        .focus-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 30px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
         }
 
-        .journey-grid strong {
+        .focus-card {
+          border: 1px solid #293242;
+          background: #10151f;
+          padding: 30px;
+          border-radius: 12px;
+        }
+
+        .focus-number {
           color: #55b7ff;
           font-size: 14px;
+          font-weight: 800;
+          margin-bottom: 20px;
         }
 
-        .journey-grid h3 {
-          margin: 20px 0 12px;
-          font-size: 20px;
+        .focus-card h3 {
+          font-size: 23px;
+          margin-bottom: 10px;
         }
 
-        .journey-grid p {
-          color: #8f9bad;
-          line-height: 1.7;
+        .focus-card p {
+          color: #aeb8c7;
           font-size: 14px;
         }
 
@@ -584,67 +722,29 @@ export default function Home() {
           text-align: center;
         }
 
-        .contact-content {
+        .contact-container {
           display: flex;
-          align-items: center;
           flex-direction: column;
+          align-items: center;
         }
 
-        .contact-content h2 {
-          margin-bottom: 25px;
+        .contact-text {
+          max-width: 700px;
+          color: #aeb8c7;
+          font-size: 16px;
         }
 
-        .contact-content > p {
-          max-width: 650px;
-          color: #9da8b9;
-          line-height: 1.7;
-        }
-
-        .contact-links {
-          display: flex;
-          gap: 14px;
-          margin-top: 35px;
-          flex-wrap: wrap;
+        .contact-buttons {
           justify-content: center;
         }
 
-        .contact-links a {
-          border: 1px solid #344154;
-          padding: 13px 20px;
-          border-radius: 6px;
-          font-size: 14px;
-          font-weight: 700;
-        }
-
-        .contact-links a:hover {
-          border-color: #55b7ff;
-          color: #55b7ff;
-        }
-
         footer {
-          max-width: 1180px;
-          margin: auto;
-          padding: 28px;
-          display: flex;
-          justify-content: space-between;
-          color: #667287;
-          font-size: 12px;
-          border-top: 1px solid #1c2432;
+          border-top: 1px solid #202633;
+          padding: 25px 24px;
+          text-align: center;
+          color: #718096;
+          font-size: 13px;
           background: #080b12;
-        }
-
-        @media (max-width: 900px) {
-          .nav-links {
-            gap: 18px;
-          }
-
-          .skills-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .journey-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
         }
 
         @media (max-width: 800px) {
@@ -655,62 +755,67 @@ export default function Home() {
           .nav-links {
             display: none;
             position: absolute;
-            top: 69px;
+            top: 67px;
             left: 0;
-            width: 100%;
-            padding: 25px 28px;
+            right: 0;
             flex-direction: column;
-            gap: 20px;
-            background: #080b12;
-            border-bottom: 1px solid #1c2432;
+            align-items: flex-start;
+            gap: 0;
+            background: #0d111a;
+            border-bottom: 1px solid #293242;
           }
 
           .nav-links.open {
             display: flex;
           }
 
-          .about-grid,
-          .projects-grid {
-            grid-template-columns: 1fr;
-            gap: 35px;
+          .nav-links a {
+            width: 100%;
+            padding: 16px 24px;
+            border-top: 1px solid #202633;
           }
 
-          h1 {
-            letter-spacing: -3px;
+          .hero-content {
+            padding: 80px 24px;
+          }
+
+          .about-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .journey-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .projects-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .focus-grid {
+            grid-template-columns: 1fr;
           }
         }
 
         @media (max-width: 500px) {
-          .hero {
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-
-          .section {
-            padding: 80px 20px;
-          }
-
           .skills-grid,
           .journey-grid {
             grid-template-columns: 1fr;
           }
 
-          .hero-buttons {
-            flex-direction: column;
+          .hero h1 {
+            letter-spacing: -2px;
           }
 
-          .button {
-            text-align: center;
-          }
-
-          footer {
-            padding: 25px 20px;
-            flex-direction: column;
-            gap: 10px;
+          .section {
+            padding: 75px 20px;
           }
         }
       `}</style>
     </>
   );
 }
-```
