@@ -98,7 +98,7 @@ export default function Home() {
 
               <div className="hero-photo">
                 <div className="photo-frame">
-                  <img src="/profile.jpeg" alt="Fathima Amna" />
+                  <img src="/profile.jpg" alt="Fathima Amna" />
                 </div>
               </div>
             </div>
