@@ -43,28 +43,17 @@ export default function Home() {
             className="menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
           >
             ☰
           </button>
 
-          <div
-            className={menuOpen ? "nav-links open" : "nav-links"}
-          >
-            <a href="#home" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
-              About
-            </a>
-            <a href="#skills" onClick={() => setMenuOpen(false)}>
-              Skills
-            </a>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>
-              Projects
-            </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
+          <div className={menuOpen ? "nav-links open" : "nav-links"}>
+            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </div>
         </div>
       </nav>
@@ -73,35 +62,48 @@ export default function Home() {
         {/* HERO */}
         <section id="home" className="hero">
           <div className="hero-content">
-            <p className="eyebrow">
-              ASPIRING QUALITY ASSURANCE ENGINEER
-            </p>
+            <div className="hero-grid">
+              <div className="hero-text-content">
+                <p className="eyebrow">
+                  ASPIRING QUALITY ASSURANCE ENGINEER
+                </p>
 
-            <h1>
-              Hi, I&apos;m <span>Fathima Amna</span>
-            </h1>
+                <h1>
+                  Hi, I&apos;m <span>Fathima Amna</span>
+                </h1>
 
-            <h2>Building Quality Into Every Application.</h2>
+                <h2>Building Quality Into Every Application.</h2>
 
-            <p className="hero-text">
-              BA ICT undergraduate at South Eastern University of Sri Lanka,
-              passionate about Software Quality Assurance, Software Testing,
-              automation, and building reliable web applications.
-            </p>
+                <p className="hero-text">
+                  BA ICT undergraduate at South Eastern University of Sri
+                  Lanka, passionate about Software Quality Assurance, Software
+                  Testing, automation, and building reliable web applications.
+                </p>
 
-            <div className="hero-buttons">
-              <a href="#projects" className="btn primary">
-                View My Projects
-              </a>
+                <div className="hero-buttons">
+                  <a href="#projects" className="btn primary">
+                    View My Projects
+                  </a>
 
-              <a href="#contact" className="btn secondary">
-                Contact Me
-              </a>
-            </div>
+                  <a href="#contact" className="btn secondary">
+                    Contact Me
+                  </a>
+                </div>
 
-            <div className="availability">
-              <span className="status-dot"></span>
-              Open to QA internship opportunities
+                <div className="availability">
+                  <span className="status-dot"></span>
+                  Open to QA internship opportunities
+                </div>
+              </div>
+
+              <div className="hero-photo">
+                <div className="photo-frame">
+                  <img
+                    src="/profile.jpg"
+                    alt="Fathima Amna"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -289,14 +291,14 @@ export default function Home() {
                 Email Me
               </a>
 
-             <a
-               href="https://www.linkedin.com/in/fathima-amna-qa"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="btn secondary"
-               >
-               LinkedIn
-             </a>
+              <a
+                href="https://www.linkedin.com/in/fathima-amna-qa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn secondary"
+              >
+                LinkedIn
+              </a>
 
               <a
                 href="https://github.com/fathimaanma6-lang"
@@ -421,6 +423,42 @@ export default function Home() {
           padding: 100px 24px;
           position: relative;
           z-index: 1;
+        }
+
+        .hero-grid {
+          display: grid;
+          grid-template-columns: 1.5fr 0.8fr;
+          align-items: center;
+          gap: 70px;
+        }
+
+        .hero-text-content {
+          min-width: 0;
+        }
+
+        .hero-photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .photo-frame {
+          width: 320px;
+          height: 380px;
+          padding: 8px;
+          border: 1px solid #55b7ff;
+          border-radius: 24px;
+          background: #10151f;
+          box-shadow: 0 0 50px rgba(85, 183, 255, 0.12);
+          overflow: hidden;
+        }
+
+        .photo-frame img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 18px;
+          display: block;
         }
 
         .eyebrow,
@@ -747,6 +785,22 @@ export default function Home() {
           background: #080b12;
         }
 
+        @media (max-width: 900px) {
+          .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+          }
+
+          .hero-photo {
+            order: -1;
+          }
+
+          .photo-frame {
+            width: 280px;
+            height: 340px;
+          }
+        }
+
         @media (max-width: 800px) {
           .menu-button {
             display: block;
@@ -813,6 +867,11 @@ export default function Home() {
 
           .section {
             padding: 75px 20px;
+          }
+
+          .photo-frame {
+            width: 220px;
+            height: 270px;
           }
         }
       `}</style>
