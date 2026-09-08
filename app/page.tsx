@@ -32,7 +32,7 @@ export default function Home() {
   ];
 
   return (
-    <main>
+    <>
       <nav className="navbar">
         <div className="nav-container">
           <a href="#home" className="logo">
@@ -67,201 +67,204 @@ export default function Home() {
         </div>
       </nav>
 
-      <section id="home" className="hero">
-        <div className="hero-content">
-          <p className="eyebrow">ASPIRING QUALITY ASSURANCE ENGINEER</p>
+      <main>
+        <section id="home" className="hero">
+          <div className="hero-content">
+            <p className="eyebrow">ASPIRING QUALITY ASSURANCE ENGINEER</p>
 
-          <h1>
-            Amanulla
-            <br />
-            <span>Fathima Amna</span>
-          </h1>
+            <h1>
+              Amanulla
+              <br />
+              <span>Fathima Amna</span>
+            </h1>
 
-          <p className="hero-description">
-            ICT undergraduate passionate about software quality, testing,
-            automation, and building reliable web applications.
-          </p>
+            <p className="hero-description">
+              ICT undergraduate passionate about software quality, testing,
+              automation, and building reliable web applications.
+            </p>
 
-          <div className="hero-buttons">
-            <a href="#projects" className="button primary">
-              View My Projects
-            </a>
+            <div className="hero-buttons">
+              <a href="#projects" className="button primary">
+                View My Projects
+              </a>
 
-            <a
-              href="https://github.com/fathimaanma6-lang"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button secondary"
-            >
-              GitHub
-            </a>
-          </div>
-
-          <div className="hero-status">
-            <span className="status-dot"></span>
-            Currently building my QA career
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="section">
-        <div className="section-container">
-          <p className="section-label">01 — ABOUT ME</p>
-
-          <h2>Focused on building better software.</h2>
-
-          <div className="about-grid">
-            <div>
-              <p className="large-text">
-                I am a BA ICT undergraduate at South Eastern University of Sri
-                Lanka with a strong interest in Quality Assurance and Software
-                Testing.
-              </p>
+              <a
+                href="https://github.com/fathimaanma6-lang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button secondary"
+              >
+                GitHub
+              </a>
             </div>
 
-            <div>
-              <p>
-                My goal is to become a professional QA Engineer who helps
-                development teams deliver reliable, secure and user-friendly
-                software.
-              </p>
-
-              <p>
-                I am currently developing practical skills in manual testing,
-                API testing, SQL testing, test case design, bug reporting and
-                test automation.
-              </p>
+            <div className="hero-status">
+              <span className="status-dot"></span>
+              Currently building my QA career
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="skills" className="section section-dark">
-        <div className="section-container">
-          <p className="section-label">02 — QA SKILLS</p>
+        <section id="about" className="section">
+          <div className="section-container">
+            <p className="section-label">01 — ABOUT ME</p>
 
-          <h2>Tools & Testing Skills</h2>
+            <h2>Focused on building better software.</h2>
 
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <div className="skill-card" key={skill}>
-                <span>✓</span>
-                {skill}
+            <div className="about-grid">
+              <div>
+                <p className="large-text">
+                  I am a BA ICT undergraduate at South Eastern University of
+                  Sri Lanka with a strong interest in Quality Assurance and
+                  Software Testing.
+                </p>
               </div>
-            ))}
+
+              <div>
+                <p>
+                  My goal is to become a professional QA Engineer who helps
+                  development teams deliver reliable, secure and user-friendly
+                  software.
+                </p>
+
+                <p>
+                  I am currently developing practical skills in manual testing,
+                  API testing, SQL testing, test case design, bug reporting and
+                  test automation.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="projects" className="section">
-        <div className="section-container">
-          <p className="section-label">03 — PROJECTS</p>
+        <section id="skills" className="section section-dark">
+          <div className="section-container">
+            <p className="section-label">02 — QA SKILLS</p>
 
-          <h2>Selected Projects</h2>
+            <h2>Tools & Testing Skills</h2>
 
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <div className="project-number">PROJECT</div>
-
-                <h3>{project.title}</h3>
-
-                <p>{project.description}</p>
-
-                <div className="tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+            <div className="skills-grid">
+              {skills.map((skill) => (
+                <div className="skill-card" key={skill}>
+                  <span>✓</span>
+                  {skill}
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-dark">
-        <div className="section-container">
-          <p className="section-label">04 — QA JOURNEY</p>
-
-          <h2>Learning. Testing. Improving.</h2>
-
-          <div className="journey-grid">
-            <div>
-              <strong>01</strong>
-              <h3>Manual Testing</h3>
-              <p>
-                Learning SDLC, STLC, test scenarios, test cases and defect
-                reporting.
-              </p>
-            </div>
-
-            <div>
-              <strong>02</strong>
-              <h3>API Testing</h3>
-              <p>
-                Practising API validation and testing workflows using Postman.
-              </p>
-            </div>
-
-            <div>
-              <strong>03</strong>
-              <h3>SQL Testing</h3>
-              <p>
-                Developing database testing skills using SQL and MySQL.
-              </p>
-            </div>
-
-            <div>
-              <strong>04</strong>
-              <h3>Automation</h3>
-              <p>
-                Building knowledge in modern browser automation tools and
-                frameworks.
-              </p>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="contact" className="section contact-section">
-        <div className="section-container contact-content">
-          <p className="section-label">05 — CONTACT</p>
+        <section id="projects" className="section">
+          <div className="section-container">
+            <p className="section-label">03 — PROJECTS</p>
 
-          <h2>Let's connect.</h2>
+            <h2>Selected Projects</h2>
 
-          <p>
-            I am open to QA internships, junior opportunities and
-            collaborations where I can learn and contribute.
-          </p>
+            <div className="projects-grid">
+              {projects.map((project) => (
+                <article className="project-card" key={project.title}>
+                  <div className="project-number">PROJECT</div>
 
-          <div className="contact-links">
-            <a href="mailto:fathimaamnaamanullah@gmail.com">Email Me</a>
+                  <h3>{project.title}</h3>
 
-            <a
-              href="https://www.linkedin.com/in/fathima-amna"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
+                  <p>{project.description}</p>
 
-            <a
-              href="https://github.com/fathimaanma6-lang"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
+                  <div className="tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="section section-dark">
+          <div className="section-container">
+            <p className="section-label">04 — QA JOURNEY</p>
+
+            <h2>Learning. Testing. Improving.</h2>
+
+            <div className="journey-grid">
+              <div>
+                <strong>01</strong>
+                <h3>Manual Testing</h3>
+                <p>
+                  Learning SDLC, STLC, test scenarios, test cases and defect
+                  reporting.
+                </p>
+              </div>
+
+              <div>
+                <strong>02</strong>
+                <h3>API Testing</h3>
+                <p>
+                  Practising API validation and testing workflows using
+                  Postman.
+                </p>
+              </div>
+
+              <div>
+                <strong>03</strong>
+                <h3>SQL Testing</h3>
+                <p>
+                  Developing database testing skills using SQL and MySQL.
+                </p>
+              </div>
+
+              <div>
+                <strong>04</strong>
+                <h3>Automation</h3>
+                <p>
+                  Building knowledge in modern browser automation tools and
+                  frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="section contact-section">
+          <div className="section-container contact-content">
+            <p className="section-label">05 — CONTACT</p>
+
+            <h2>Let's connect.</h2>
+
+            <p>
+              I am open to QA internships, junior opportunities and
+              collaborations where I can learn and contribute.
+            </p>
+
+            <div className="contact-links">
+              <a href="mailto:fathimaamnaamanullah@gmail.com">Email Me</a>
+
+              <a
+                href="https://www.linkedin.com/in/fathima-amna"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="https://github.com/fathimaanma6-lang"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer>
         <div>© {new Date().getFullYear()} Amanulla Fathima Amna</div>
         <div>Aspiring QA Engineer</div>
       </footer>
 
-      <style jsx global>{`
+      <style>{`
         * {
           box-sizing: border-box;
           margin: 0;
@@ -289,7 +292,7 @@ export default function Home() {
           left: 0;
           width: 100%;
           z-index: 100;
-          background: rgba(8, 11, 18, 0.9);
+          background: rgba(8, 11, 18, 0.95);
           border-bottom: 1px solid #1c2432;
           backdrop-filter: blur(12px);
         }
@@ -460,8 +463,8 @@ export default function Home() {
 
         .large-text {
           font-size: 27px;
-          color: white !important;
-          line-height: 1.4 !important;
+          color: white;
+          line-height: 1.4;
         }
 
         .skills-grid {
@@ -599,6 +602,7 @@ export default function Home() {
           color: #667287;
           font-size: 12px;
           border-top: 1px solid #1c2432;
+          background: #080b12;
         }
 
         @media (max-width: 800px) {
@@ -670,7 +674,7 @@ export default function Home() {
             gap: 10px;
           }
         }
-      }</style>
-    </main>
+      `}</style>
+    </>
   );
 }
