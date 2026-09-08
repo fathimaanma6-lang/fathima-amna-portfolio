@@ -1,3 +1,4 @@
+```tsx
 "use client";
 
 import { useState } from "react";
@@ -20,14 +21,14 @@ export default function Home() {
     {
       title: "Bus On My Way",
       description:
-        "A Smart Bus Management and Online Booking System developed with Laravel, PHP and MySQL.",
+        "A Smart Bus Management and Online Booking System developed as a university group project using Laravel, PHP, MySQL and Bootstrap.",
       tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
     },
     {
       title: "Secure Student ID Card System",
       description:
-        "A proposed secure digital student identification system using modern web technologies and security practices.",
-      tags: ["React", "Node.js", "MySQL", "Security"],
+        "A proposed secure digital student identification system designed to improve student identity management using modern web technologies and security practices.",
+      tags: ["React", "Node.js", "MySQL", "AWS Security"],
     },
   ];
 
@@ -60,6 +61,9 @@ export default function Home() {
             <a href="#projects" onClick={() => setMenuOpen(false)}>
               Projects
             </a>
+            <a href="#journey" onClick={() => setMenuOpen(false)}>
+              QA Journey
+            </a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>
               Contact
             </a>
@@ -68,18 +72,20 @@ export default function Home() {
       </nav>
 
       <main>
+        {/* HERO */}
         <section id="home" className="hero">
           <div className="hero-content">
             <p className="eyebrow">ASPIRING QUALITY ASSURANCE ENGINEER</p>
 
             <h1>
-              Amanulla
+              Fathima
               <br />
-              <span>Fathima Amna</span>
+              <span>Amna</span>
             </h1>
 
             <p className="hero-description">
-              ICT undergraduate passionate about software quality, testing,
+              BA ICT undergraduate at South Eastern University of Sri Lanka,
+              passionate about Software Quality Assurance, Software Testing,
               automation, and building reliable web applications.
             </p>
 
@@ -100,48 +106,56 @@ export default function Home() {
 
             <div className="hero-status">
               <span className="status-dot"></span>
-              Currently building my QA career
+              Open to QA internship opportunities
             </div>
           </div>
         </section>
 
+        {/* ABOUT */}
         <section id="about" className="section">
           <div className="section-container">
             <p className="section-label">01 — ABOUT ME</p>
 
-            <h2>Focused on building better software.</h2>
+            <h2>Building my career in Software Quality Assurance.</h2>
 
             <div className="about-grid">
               <div>
                 <p className="large-text">
-                  I am a BA ICT undergraduate at South Eastern University of
-                  Sri Lanka with a strong interest in Quality Assurance and
-                  Software Testing.
+                  I am a third-year BA Information and Communication Technology
+                  undergraduate at South Eastern University of Sri Lanka,
+                  Faculty of Arts and Culture.
                 </p>
               </div>
 
               <div>
                 <p>
-                  My goal is to become a professional QA Engineer who helps
-                  development teams deliver reliable, secure and user-friendly
-                  software.
+                  I am passionate about Quality Assurance and Software Testing,
+                  with a strong interest in ensuring that software is reliable,
+                  secure, functional and user-friendly.
                 </p>
 
                 <p>
-                  I am currently developing practical skills in manual testing,
-                  API testing, SQL testing, test case design, bug reporting and
+                  My current learning journey focuses on manual testing, test
+                  case design, defect reporting, API testing, SQL testing and
                   test automation.
+                </p>
+
+                <p>
+                  I am continuously improving my technical and problem-solving
+                  skills through academic projects, practical testing exercises
+                  and independent learning.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* SKILLS */}
         <section id="skills" className="section section-dark">
           <div className="section-container">
             <p className="section-label">02 — QA SKILLS</p>
 
-            <h2>Tools & Testing Skills</h2>
+            <h2>Testing Skills & Tools</h2>
 
             <div className="skills-grid">
               {skills.map((skill) => (
@@ -154,11 +168,12 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PROJECTS */}
         <section id="projects" className="section">
           <div className="section-container">
             <p className="section-label">03 — PROJECTS</p>
 
-            <h2>Selected Projects</h2>
+            <h2>Academic & Technical Projects</h2>
 
             <div className="projects-grid">
               {projects.map((project) => (
@@ -180,7 +195,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-dark">
+        {/* QA JOURNEY */}
+        <section id="journey" className="section section-dark">
           <div className="section-container">
             <p className="section-label">04 — QA JOURNEY</p>
 
@@ -191,8 +207,8 @@ export default function Home() {
                 <strong>01</strong>
                 <h3>Manual Testing</h3>
                 <p>
-                  Learning SDLC, STLC, test scenarios, test cases and defect
-                  reporting.
+                  Learning SDLC, STLC, test scenarios, test cases, test
+                  execution and defect reporting.
                 </p>
               </div>
 
@@ -200,8 +216,8 @@ export default function Home() {
                 <strong>02</strong>
                 <h3>API Testing</h3>
                 <p>
-                  Practising API validation and testing workflows using
-                  Postman.
+                  Developing practical API testing skills and learning to
+                  validate requests and responses using Postman.
                 </p>
               </div>
 
@@ -209,22 +225,24 @@ export default function Home() {
                 <strong>03</strong>
                 <h3>SQL Testing</h3>
                 <p>
-                  Developing database testing skills using SQL and MySQL.
+                  Building database testing knowledge using SQL and MySQL to
+                  validate data and application behaviour.
                 </p>
               </div>
 
               <div>
                 <strong>04</strong>
-                <h3>Automation</h3>
+                <h3>Test Automation</h3>
                 <p>
-                  Building knowledge in modern browser automation tools and
-                  frameworks.
+                  Developing knowledge of browser automation and modern testing
+                  frameworks including Selenium and Playwright.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* CONTACT */}
         <section id="contact" className="section contact-section">
           <div className="section-container contact-content">
             <p className="section-label">05 — CONTACT</p>
@@ -232,12 +250,16 @@ export default function Home() {
             <h2>Let's connect.</h2>
 
             <p>
-              I am open to QA internships, junior opportunities and
-              collaborations where I can learn and contribute.
+              I am interested in QA internships, junior opportunities and
+              opportunities where I can apply my testing knowledge, learn from
+              experienced professionals and contribute to building quality
+              software.
             </p>
 
             <div className="contact-links">
-              <a href="mailto:fathimaamnaamanullah@gmail.com">Email Me</a>
+              <a href="mailto:fathimaamnaamanullah@gmail.com">
+                Email Me
+              </a>
 
               <a
                 href="https://www.linkedin.com/in/fathima-amna"
@@ -260,8 +282,8 @@ export default function Home() {
       </main>
 
       <footer>
-        <div>© {new Date().getFullYear()} Amanulla Fathima Amna</div>
-        <div>Aspiring QA Engineer</div>
+        <div>© {new Date().getFullYear()} Fathima Amna</div>
+        <div>BA ICT Undergraduate • Aspiring QA Engineer</div>
       </footer>
 
       <style>{`
@@ -318,7 +340,7 @@ export default function Home() {
 
         .nav-links {
           display: flex;
-          gap: 32px;
+          gap: 28px;
           color: #aab4c5;
           font-size: 14px;
         }
@@ -366,7 +388,7 @@ export default function Home() {
         }
 
         h1 {
-          font-size: clamp(55px, 9vw, 110px);
+          font-size: clamp(60px, 10vw, 120px);
           line-height: 0.94;
           letter-spacing: -5px;
           margin-bottom: 32px;
@@ -377,7 +399,7 @@ export default function Home() {
         }
 
         .hero-description {
-          max-width: 650px;
+          max-width: 720px;
           color: #aab4c5;
           font-size: 19px;
           line-height: 1.7;
@@ -442,7 +464,7 @@ export default function Home() {
         }
 
         h2 {
-          max-width: 800px;
+          max-width: 850px;
           font-size: clamp(38px, 6vw, 70px);
           line-height: 1;
           letter-spacing: -3px;
@@ -496,6 +518,12 @@ export default function Home() {
           padding: 35px;
           background: #0d121c;
           min-height: 300px;
+          transition: 0.2s ease;
+        }
+
+        .project-card:hover {
+          transform: translateY(-4px);
+          border-color: #55b7ff;
         }
 
         .project-number {
@@ -567,7 +595,7 @@ export default function Home() {
         }
 
         .contact-content > p {
-          max-width: 600px;
+          max-width: 650px;
           color: #9da8b9;
           line-height: 1.7;
         }
@@ -605,6 +633,20 @@ export default function Home() {
           background: #080b12;
         }
 
+        @media (max-width: 900px) {
+          .nav-links {
+            gap: 18px;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .journey-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
         @media (max-width: 800px) {
           .menu-button {
             display: block;
@@ -618,6 +660,7 @@ export default function Home() {
             width: 100%;
             padding: 25px 28px;
             flex-direction: column;
+            gap: 20px;
             background: #080b12;
             border-bottom: 1px solid #1c2432;
           }
@@ -626,22 +669,14 @@ export default function Home() {
             display: flex;
           }
 
-          h1 {
-            letter-spacing: -3px;
-          }
-
           .about-grid,
           .projects-grid {
             grid-template-columns: 1fr;
             gap: 35px;
           }
 
-          .skills-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .journey-grid {
-            grid-template-columns: 1fr 1fr;
+          h1 {
+            letter-spacing: -3px;
           }
         }
 
@@ -678,3 +713,4 @@ export default function Home() {
     </>
   );
 }
+```
